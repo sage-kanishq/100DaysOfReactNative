@@ -17,9 +17,10 @@ const Weather = ({city}) => {
     getWeather();
   });
   const getWeather = () => {
+    const apiKey = "e96160fa68ba7a8349e6826269aeb93a"
     if (city !== '') {
       fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=5bb859de48ef329e3758640b3fe1ddcc&units=metric`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`,
       )
         .then((data) => data.json())
         .then((result) => {

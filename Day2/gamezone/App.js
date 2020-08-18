@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
 import Navigator from "./routes/drawer";
+import { LogBox } from "react-native";
 
 const getFonts = () =>
   Font.loadAsync({
@@ -20,3 +21,4 @@ export default function App() {
     );
   }
 }
+LogBox.ignoreAllLogs(true)
